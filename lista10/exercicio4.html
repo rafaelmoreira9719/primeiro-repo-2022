@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio4</title>
+</head>
+<body>
+ 
+<h3>Qual método de pagamento?</h3>
+<select name="" id="opcoes">
+    <option value="1">Dinheiro</option>
+    <option value="2">Cartão de débito</option>
+    <option value="3">Cartão de crédito</option>
+    <option value="4">Boleto</option>
+</select>
+<button onclick="analise()">Analisar Compra</button>
+<br><br>
+<div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+function analise() {
+    var metodo = opcoes.value
+    if (metodo == 1 || metodo == 2) {
+       div_msg.innerHTML = `Você terá que pagar a vista` 
+    } else {
+       div_msg.innerHTML = `Pagamento poderá ser parcelado` 
+    }
+}
+
+</script>
